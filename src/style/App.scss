@@ -1,4 +1,4 @@
-@import "./reset/reset";
-@import "./components/common";
+@use "./reset/reset";
+@use "./components/common";
 
-@import './pages/home.scss'
+@use './pages/home.scss'
