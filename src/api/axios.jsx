@@ -15,6 +15,15 @@ export const loginStudent = async (formData) => {
   }
 };
 
+export const studentList = async (formData) => {
+  try {
+    const res = await api.get(`v1/student/getall`);
+    return res.data;
+  } catch (error) {
+    return error;
+  }
+};
+
 export const registerStudent = async (formData) => {
   try {
     const res = await api.post(`/v1/auth/register`, formData);

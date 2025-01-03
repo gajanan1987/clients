@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Login from "../pages/Login.jsx";
 import { Home } from "../pages/Home.jsx";
 import Profile from "../pages/Profile.jsx";
-import { Userlisting } from "../components/Userlisting.jsx";
+import { StudentList } from "../components/StudentList.jsx";
 import ProtectedRotes from "./ProtectedRotes.jsx";
 import Register from "../pages/Register.jsx";
 
@@ -18,7 +18,7 @@ const Approutes = () => {
         <Route element={<ProtectedRotes />}>
           <Route path="/profile" element={<Profile />}></Route>
         </Route>
-        <Route path="/userlist" element={<Userlisting />}></Route>
+        <Route path="/studentlist" element={<StudentList />}></Route>
       </Routes>
     </>
   );

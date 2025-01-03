@@ -1,15 +1,13 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { studentList } from "../api/axios";
 
-export const Userlisting = () => {
+export const StudentList = () => {
   const [data, setData] = useState([]);
 
   const students = async () => {
-    const res = await axios.get(
-      `http://localhost:8888/.netlify/functions/api/v1/student/getall`
-    );
-    const rdata = res.data.data;
-    setData(rdata);
+    const res = await studentList();
+    console.log("🚀 ~ students ~ rdata:", res);
+    setData(res.data);
   };
 
   useEffect(() => {
